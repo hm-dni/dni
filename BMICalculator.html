@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hamdani's BMI Calculator</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+		body {
+            background: url('image/background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Hamdani's Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="HomepageDua.html">My Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Photogallery2.html">My Personal Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="Aboutus2.html">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="BMICalculator.html">My BMI Calculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="Comment2.html">My Comment Section</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Calculate your Body Mass Index (BMI)!</h1>
+        <fieldset>
+            <div class="form-group">
+                <label for="weight">Weight (in kg):</label>
+                <input type="text" class="form-control" id="weight">
+            </div>
+            <div class="form-group">
+                <label for="height">Height (in meters):</label>
+                <input type="text" class="form-control" id="height">
+            </div>
+            <br>
+            <button onclick="calculate();" class="btn btn-primary btn-block">Get BMI!</button>
+        </fieldset>
+        <div class="result text-center">
+            <p>Your BMI is <span id="score"></span>.</p>
+            <p>Your body type is <span id="type"></span>.</p>
+        </div>
+    </div>
+    <script>
+        function calculate() {
+            var weight = parseFloat(document.getElementById("weight").value);
+            var height = parseFloat(document.getElementById("height").value);
+            var bmi = weight / (height * height);
+            document.getElementById("score").innerHTML = bmi.toFixed(2);
+            var bodyType;
+            if (bmi < 18.5) {
+                bodyType = "Underweight";
+            } else if (bmi >= 18.5 && bmi < 25) {
+                bodyType = "Normal";
+            } else if (bmi >= 25 && bmi < 30) {
+                bodyType = "Overweight";
+            } else {
+                bodyType = "Obese";
+            }
+            document.getElementById("type").innerHTML = bodyType;
+        }
+    </script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>

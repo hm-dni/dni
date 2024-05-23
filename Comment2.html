@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hamdani's Comment Section</title>
+    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <style>
+		body {
+            background: url('image/background.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Hamdani's Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="HomepageDua.html">My Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="Photogallery2.html">My Personal Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="Aboutus2.html">About Me</a></li>
+                <li class="nav-item"><a class="nav-link" href="BMICalculator.html">My BMI Calculator</a></li>
+                <li class="nav-item"><a class="nav-link" href="Comment2.html">My Comment Section</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h3 class="mb-4">Comment Section</h3>
+        <form action="Comment2.php">
+            <div class="form-group">
+                <input type="text" class="form-control" name="Name" placeholder="Your Full Name">
+            </div>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="male" value="Male" checked>
+                    <label class="form-check-label" for="male">Male</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Gender" id="female" value="Female">
+                    <label class="form-check-label" for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" class="form-control" name="Email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="Comment" rows="4" placeholder="Enter Your Comment Here"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.min.js"></script>
+</body>
+
+</html>
